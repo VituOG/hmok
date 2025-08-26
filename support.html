@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Suporte — Hone Optimizer</title>
+	<link rel="icon" href="/favicon.svg" />
+	<link rel="stylesheet" href="/src/styles/globals.css" />
+</head>
+<body>
+	<a class="skip-link" href="#main">Pular para conteúdo</a>
+	<header class="site-header scrolled"><nav class="container nav"><a href="/" class="brand">Hone Optimizer</a></nav></header>
+	<main id="main" class="section" tabindex="-1"><div class="container" style="display:grid;gap:24px;grid-template-columns:1fr;">
+		<section>
+			<h1 class="section-title">Suporte</h1>
+			<form class="card" style="margin-top:12px;display:flex;flex-direction:column;gap:12px;" onsubmit="event.preventDefault(); this.querySelector('.ok').hidden=false;">
+				<label>Nome<input required style="margin-top:6px" class="input" /></label>
+				<label>Email<input type="email" required style="margin-top:6px" class="input" /></label>
+				<label>Categoria<select class="input" style="margin-top:6px"><option>Instalação</option><option>Licença</option><option>Desempenho</option></select></label>
+				<label>Mensagem<textarea class="input" style="margin-top:6px;height:120px"></textarea></label>
+				<button class="btn-primary" type="submit">Enviar</button>
+				<p class="ok" hidden style="color:#34d399">Mensagem enviada!</p>
+			</form>
+		</section>
+		<section>
+			<h2 class="section-title">Base de conhecimento</h2>
+			<div class="features-grid" style="margin-top:12px;grid-template-columns:1fr;">
+				<article class="card"><h3>Requisitos mínimos</h3><p>Confirme memória, disco e versão do Windows.</p></article>
+				<article class="card"><h3>Limpeza segura</h3><p>Arquivos pessoais não são alterados.</p></article>
+			</div>
+		</section>
+	</div></main>
+	<footer class="site-footer"><div class="container footer-inner"><p>© <span id="year"></span> Hone Optimizer</p></div></footer>
+	<script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="manifest" href="/public/manifest.json" />
+		<link rel="apple-touch-icon" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Hone Optimizer</title>
+		<meta name="description" content="Acelere o seu PC com um clique. Limpeza profunda, inicialização mais rápida e desempenho estável." />
+		<meta name="color-scheme" content="light" />
+		<meta property="og:title" content="Hone Optimizer" />
+		<meta property="og:description" content="Acelere o seu PC com um clique." />
+		<meta property="og:image" content="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MzAiIHZpZXdCb3g9IjAgMCAxMjAwIDYzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjMwIiBmaWxsPSIjZjVmNWY3Ii8+Cjx0ZXh0IHg9IjYwMCIgeT0iMzE1IiBmb250LWZtaWxseT0iSW50ZXIiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiMxZDFmMjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkhvbmUgT3B0aW1pemVyPC90ZXh0Pgo8L3N2Zz4K" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="/" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Hone Optimizer" />
+		<meta name="twitter:description" content="Acelere o seu PC com um clique." />
+		<meta name="twitter:image" content="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MzAiIHZpZXdCb3g9IjAgMCAxMjAwIDYzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjMwIiBmaWxsPSIjZjVmNWY3Ii8+Cjx0ZXh0IHg9IjYwMCIgeT0iMzE1IiBmb250LWZtaWxseT0iSW50ZXIiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiMxZDFmMjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkhvbmUgT3B0aW1pemVyPC90ZXh0Pgo8L3N2Zz4K" />
+		<link rel="canonical" href="/" />
+		<meta name="theme-color" content="#1e1f22" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="/src/styles/globals.css" />
+		<link rel="prefetch" href="/download.html" as="document" />
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "SoftwareApplication",
+			"name": "Hone Optimizer",
+			"operatingSystem": "Windows 10/11",
+			"applicationCategory": "UtilitiesApplication",
+			"description": "Acelere o seu PC com um clique. Limpeza profunda, inicialização mais rápida e desempenho estável.",
+			"offers": {
+				"@type": "Offer",
+				"price": "0",
+				"priceCurrency": "USD"
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<a class="skip-link" href="#main">Pular para conteúdo</a>
+		<!-- Header -->
+		<header class="site-header" role="banner">
+			<nav class="container nav" aria-label="Primária">
+				<a href="/" class="brand">Hone Optimizer</a>
+				<ul class="nav-links" id="nav-links">
+					<li><a href="/" aria-current="page">Home</a></li>
+					<li><a href="/features.html">Recursos</a></li>
+					<li><a href="/download.html">Download</a></li>
+					<li><a href="/pricing.html">Preços</a></li>
+					<li><a href="/changelog.html">Changelog</a></li>
+					<li><a href="/support.html">Suporte</a></li>
+				</ul>
+				<a href="/download.html" class="btn-primary nav-cta">Baixar agora</a>
+				<button class="btn-secondary nav-login" id="nav-login" onclick="window.location.href='/login.html'">Entrar</button>
+				<div class="user-menu" id="user-menu" hidden>
+					<button class="user-toggle" id="user-toggle" aria-expanded="false" aria-haspopup="true">
+						<div class="user-avatar">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+								<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+								<circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+							</svg>
+						</div>
+						<span class="user-name" id="user-name">Usuário</span>
+						<svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none">
+							<path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</button>
+					<div class="user-dropdown" id="user-dropdown" hidden>
+						<div class="user-info">
+							<span class="user-email" id="user-email">user@example.com</span>
+						</div>
+						<div class="user-actions">
+							<button class="dropdown-item" onclick="window.location.href='/profile.html'">
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+									<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+									<circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+								</svg>
+								Perfil
+							</button>
+							<button class="dropdown-item" onclick="window.location.href='/settings.html'">
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+									<path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								Configurações
+							</button>
+							<hr class="dropdown-divider">
+							<button class="dropdown-item logout" id="logout-btn">
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+									<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<polyline points="16,17 21,12 16,7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<line x1="21" y1="12" x2="9" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								Sair
+							</button>
+						</div>
+					</div>
+				</div>
+				<button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
+					<svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+						<circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+						<path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+					</svg>
+					<svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" hidden>
+						<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</button>
+				<button class="menu-btn" id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu">
+					<span class="sr-only">Abrir menu</span>
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
+						<path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2"/>
+					</svg>
+				</button>
+			</nav>
+			<div class="mobile-menu" id="mobile-menu" hidden>
+				<div class="container">
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/features.html">Recursos</a></li>
+						<li><a href="/download.html">Download</a></li>
+						<li><a href="/pricing.html">Preços</a></li>
+						<li><a href="/changelog.html">Changelog</a></li>
+						<li><a href="/support.html">Suporte</a></li>
+						<li><a class="btn-primary" href="/download.html">Baixar agora</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<main id="main" tabindex="-1">
+		<!-- Hero com efeitos de fundo -->
+		<section class="section hero">
+			<div class="fx animated-gradient" aria-hidden="true"></div>
+			<div class="fx blobs" aria-hidden="true">
+				<div class="blob a"></div>
+				<div class="blob b"></div>
+			</div>
+			<div class="container hero-inner">
+				<h1 class="heading-hero">Acelere o seu PC com um clique</h1>
+				<p class="sub-hero">Limpeza profunda, inicialização mais rápida e desempenho estável — tudo em minutos.</p>
+				<div class="hero-ctas">
+					<a href="/download.html" class="btn-primary">Baixar agora</a>
+					<a href="#features" class="btn-secondary">Ver recursos</a>
+				</div>
+				<div class="hero-badges">
+					<span>+2M de downloads</span>
+					<span>Compatível com Windows 10/11</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- Barra de métricas -->
+		<section class="section">
+			<div class="container stats">
+				<div class="stat-card">
+					<span class="stat-value" data-count="-45" data-suffix="%"></span>
+					<p class="stat-label">Tempo de boot</p>
+				</div>
+				<div class="stat-card">
+					<span class="stat-value" data-count="12" data-suffix="GB"></span>
+					<p class="stat-label">Espaço liberado</p>
+				</div>
+				<div class="stat-card">
+					<span class="stat-value" data-count="150" data-suffix="+"></span>
+					<p class="stat-label">Apps otimizados</p>
+				</div>
+				<div class="stat-card">
+					<span class="stat-value" data-count="4.8" data-decimals="1" data-suffix="★"></span>
+					<p class="stat-label">Satisfação</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Recursos -->
+		<section class="section features" id="features">
+			<div class="container">
+				<div class="section-header">
+					<h2>Recursos</h2>
+					<p>Descubra como o Hone Optimizer pode transformar o desempenho do seu PC</p>
+				</div>
+
+				<!-- Filter System -->
+				<div class="filter-container">
+					<div class="filter-tabs">
+						<button class="filter-tab active" data-filter="all">Todos</button>
+						<button class="filter-tab" data-filter="performance">Performance</button>
+						<button class="filter-tab" data-filter="security">Segurança</button>
+						<button class="filter-tab" data-filter="maintenance">Manutenção</button>
+						<button class="filter-tab" data-filter="optimization">Otimização</button>
+					</div>
+					<div class="filter-search">
+						<input type="text" placeholder="Buscar recursos..." class="filter-input" id="filter-search">
+					</div>
+				</div>
+
+				<div class="features-grid" id="features-grid">
+					<article class="card" data-filter="performance optimization">
+						<div class="card-header">
+							<h3>Limpeza Inteligente</h3>
+							<button class="favorite-btn" data-item="Limpeza Inteligente" aria-label="Adicionar aos favoritos">
+								<svg class="heart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+									<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
+						<p>Remove arquivos temporários, cache e lixo digital automaticamente</p>
+					</article>
+					<article class="card" data-filter="performance maintenance">
+						<div class="card-header">
+							<h3>Otimização de Inicialização</h3>
+							<button class="favorite-btn" data-item="Otimização de Inicialização" aria-label="Adicionar aos favoritos">
+								<svg class="heart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+									<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
+						<p>Reduz o tempo de boot e gerencia programas de inicialização</p>
+					</article>
+					<article class="card" data-filter="security optimization">
+						<div class="card-header">
+							<h3>Proteção em Tempo Real</h3>
+							<button class="favorite-btn" data-item="Proteção em Tempo Real" aria-label="Adicionar aos favoritos">
+								<svg class="heart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+									<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
+						<p>Monitora e bloqueia ameaças em tempo real</p>
+					</article>
+					<article class="card" data-filter="maintenance optimization">
+						<div class="card-header">
+							<h3>Manutenção Automática</h3>
+							<button class="favorite-btn" data-item="Manutenção Automática" aria-label="Adicionar aos favoritos">
+								<svg class="heart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+									<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
+						<p>Agenda e executa tarefas de manutenção automaticamente</p>
+					</article>
+					<article class="card" data-filter="performance">
+						<div class="card-header">
+							<h3>Monitor de Recursos</h3>
+							<button class="favorite-btn" data-item="Monitor de Recursos" aria-label="Adicionar aos favoritos">
+								<svg class="heart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+									<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
+						<p>Acompanha CPU, RAM e disco em tempo real</p>
+					</article>
+					<article class="card" data-filter="security">
+						<div class="card-header">
+							<h3>Firewall Inteligente</h3>
+							<button class="favorite-btn" data-item="Firewall Inteligente" aria-label="Adicionar aos favoritos">
+								<svg class="heart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+									<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
+						<p>Protege contra ataques e conexões suspeitas</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- Antes/Depois -->
+		<section class="section">
+			<div class="container">
+				<h2 class="section-title">Comparativo antes/depois</h2>
+				<div class="before-after">
+					<div style="width:100%; height:100%; background:linear-gradient(45deg, #f0f0f0 25%, transparent 25%), linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #f0f0f0 75%), linear-gradient(-45deg, transparent 75%, #f0f0f0 75%); background-size:20px 20px; background-position:0 0, 0 10px, 10px -10px, -10px 0px; display:flex; align-items:center; justify-content:center; color:#666; font-size:14px;">Antes</div>
+					<div id="ba-after" class="after" style="width:50%">
+						<div style="width:100%; height:100%; background:linear-gradient(45deg, #e0f7ff 25%, transparent 25%), linear-gradient(-45deg, #e0f7ff 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #e0f7ff 75%), linear-gradient(-45deg, transparent 75%, #e0f7ff 75%); background-size:20px 20px; background-position:0 0, 0 10px, 10px -10px, -10px 0px; display:flex; align-items:center; justify-content:center; color:#0071e3; font-size:14px;">Depois</div>
+					</div>
+				</div>
+				<label class="range-label" for="ba-range">Arraste para comparar</label>
+				<input id="ba-range" type="range" min="0" max="100" value="50" />
+			</div>
+		</section>
+
+		<!-- Depoimentos -->
+		<section class="section">
+			<div class="container testimonials">
+				<figure class="card">
+					<blockquote>“Meu PC liga muito mais rápido agora!”</blockquote>
+					<figcaption>Ana — Windows 11 Pro</figcaption>
+				</figure>
+				<figure class="card">
+					<blockquote>“Liberei 15 GB em poucos minutos.”</blockquote>
+					<figcaption>Carlos — Windows 10</figcaption>
+				</figure>
+				<figure class="card">
+					<blockquote>“O modo turbo ajuda nos jogos.”</blockquote>
+					<figcaption>Rafa — Windows 11 Home</figcaption>
+				</figure>
+			</div>
+		</section>
+
+		<!-- FAQ -->
+		<section class="section">
+			<div class="container">
+				<h2 class="section-title">Perguntas frequentes</h2>
+				<div class="faq">
+					<details>
+						<summary>Como funciona a limpeza inteligente?</summary>
+						<p>Varremos caches e temporários com segurança, preservando seus dados.</p>
+					</details>
+					<details>
+						<summary>É compatível com Windows 10/11?</summary>
+						<p>Sim, totalmente suportado em Windows 10 e 11 (x64).</p>
+					</details>
+					<details>
+						<summary>Tenho garantia?</summary>
+						<p>Sim, 7 dias de garantia no plano Pro.</p>
+					</details>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA final -->
+		<section class="section">
+			<div class="container cta">
+				<h3>Pronto para destravar desempenho?</h3>
+				<div class="cta-buttons">
+					<button class="btn-primary btn-download" id="download-btn">
+						<span class="btn-text">Baixar Hone Optimizer</span>
+						<span class="btn-loading" hidden>
+							<svg class="spinner" viewBox="0 0 24 24">
+								<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="31.416" stroke-dashoffset="31.416">
+									<animate attributeName="stroke-dasharray" dur="2s" values="0 31.416;15.708 15.708;0 31.416" repeatCount="indefinite"/>
+									<animate attributeName="stroke-dashoffset" dur="2s" values="0;-15.708;-31.416" repeatCount="indefinite"/>
+								</circle>
+							</svg>
+						</span>
+					</button>
+					<div class="progress-container" id="progress-container" hidden>
+						<div class="progress-bar">
+							<div class="progress-fill" id="progress-fill"></div>
+						</div>
+						<div class="progress-text" id="progress-text">Preparando download...</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		</main>
+
+		<!-- Footer -->
+		<footer class="site-footer" role="contentinfo">
+			<div class="container footer-inner">
+				<p>© <span id="year"></span> Hone Optimizer. Todos os direitos reservados.</p>
+				<div class="badges">
+					<span class="badge">v1.0.0</span>
+					<span class="badge">Feito com ♡</span>
+				</div>
+			</div>
+		</footer>
+
+		<script src="/src/main.js"></script>
+	</body>
+</html>
