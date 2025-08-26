@@ -1,4 +1,4 @@
-// Login Page JavaScript
+// Login Page JavaScript - Updated for new design
 (function () {
 	// Elements
 	const tabs = document.querySelectorAll('.auth-tab')
@@ -7,7 +7,7 @@
 	const registerForm = document.getElementById('register-form')
 	const socialButtons = document.querySelectorAll('.btn-social')
 	
-	// Tab switching
+	// Tab switching with smooth transitions
 	tabs.forEach(tab => {
 		tab.addEventListener('click', () => {
 			const target = tab.dataset.tab
@@ -16,19 +16,99 @@
 			tabs.forEach(t => t.classList.remove('active'))
 			tab.classList.add('active')
 			
-			// Show/hide forms
+			// Show/hide forms with fade effect
 			forms.forEach(form => {
-				form.hidden = form.dataset.tab !== target
+				if (form.dataset.tab === target) {
+					form.hidden = false
+					form.style.opacity = '0'
+					form.style.transform = 'translateY(20px)'
+					
+					// Trigger animation
+					setTimeout(() => {
+						form.style.transition = 'all 0.3s ease'
+						form.style.opacity = '1'
+						form.style.transform = 'translateY(0)'
+					}, 10)
+				} else {
+					form.style.transition = 'all 0.3s ease'
+					form.style.opacity = '0'
+					form.style.transform = 'translateY(-20px)'
+					
+					setTimeout(() => {
+						form.hidden = true
+					}, 300)
+				}
 			})
 			
 			// Focus first input of active form
-			const activeForm = document.querySelector(`[data-tab="${target}"]`)
-			const firstInput = activeForm?.querySelector('input')
-			if (firstInput) firstInput.focus()
+			setTimeout(() => {
+				const activeForm = document.querySelector(`[data-tab="${target}"]`)
+				const firstInput = activeForm?.querySelector('input')
+				if (firstInput) firstInput.focus()
+			}, 350)
 		})
 	})
 
-	// Login form submission
+	// Enhanced form validation
+	function validateEmail(email) {
+		const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+		return re.test(email)
+	}
+
+	function validatePassword(password) {
+		return password.length >= 8
+	}
+
+	function showFieldError(field, message) {
+		const wrapper = field.closest('.form-group')
+		const existingError = wrapper.querySelector('.field-error')
+		
+		if (existingError) {
+			existingError.remove()
+		}
+		
+		const errorDiv = document.createElement('div')
+		errorDiv.className = 'field-error'
+		errorDiv.textContent = message
+		errorDiv.style.color = '#ff3b30'
+		errorDiv.style.fontSize = '12px'
+		errorDiv.style.marginTop = '4px'
+		
+		wrapper.appendChild(errorDiv)
+		field.style.borderColor = '#ff3b30'
+	}
+
+	function clearFieldError(field) {
+		const wrapper = field.closest('.form-group')
+		const error = wrapper.querySelector('.field-error')
+		if (error) {
+			error.remove()
+		}
+		field.style.borderColor = '#e0e0e0'
+	}
+
+	// Real-time validation
+	function setupFieldValidation() {
+		const inputs = document.querySelectorAll('input[type="email"], input[type="password"], input[type="text"]')
+		
+		inputs.forEach(input => {
+			input.addEventListener('blur', () => {
+				if (input.type === 'email' && input.value && !validateEmail(input.value)) {
+					showFieldError(input, 'Email inválido')
+				} else if (input.type === 'password' && input.value && !validatePassword(input.value)) {
+					showFieldError(input, 'Senha deve ter pelo menos 8 caracteres')
+				} else {
+					clearFieldError(input)
+				}
+			})
+			
+			input.addEventListener('input', () => {
+				clearFieldError(input)
+			})
+		})
+	}
+
+	// Login form submission with enhanced UX
 	if (loginForm) {
 		loginForm.addEventListener('submit', async (e) => {
 			e.preventDefault()
@@ -38,8 +118,20 @@
 			const password = loginForm.querySelector('#login-password').value
 			const remember = loginForm.querySelector('input[name="remember"]').checked
 			
+			// Validation
+			if (!validateEmail(email)) {
+				showFieldError(loginForm.querySelector('#login-email'), 'Email inválido')
+				return
+			}
+			
+			if (!validatePassword(password)) {
+				showFieldError(loginForm.querySelector('#login-password'), 'Senha deve ter pelo menos 8 caracteres')
+				return
+			}
+			
 			// Show loading state
 			submitBtn.classList.add('loading')
+			submitBtn.disabled = true
 			
 			try {
 				// Simulate API call
@@ -75,11 +167,12 @@
 			} finally {
 				// Hide loading state
 				submitBtn.classList.remove('loading')
+				submitBtn.disabled = false
 			}
 		})
 	}
 
-	// Register form submission
+	// Register form submission with enhanced validation
 	if (registerForm) {
 		registerForm.addEventListener('submit', async (e) => {
 			e.preventDefault()
@@ -91,9 +184,24 @@
 			const confirm = registerForm.querySelector('#register-confirm').value
 			const terms = registerForm.querySelector('input[name="terms"]').checked
 			
-			// Validation
+			// Enhanced validation
+			if (!name.trim()) {
+				showFieldError(registerForm.querySelector('#register-name'), 'Nome é obrigatório')
+				return
+			}
+			
+			if (!validateEmail(email)) {
+				showFieldError(registerForm.querySelector('#register-email'), 'Email inválido')
+				return
+			}
+			
+			if (!validatePassword(password)) {
+				showFieldError(registerForm.querySelector('#register-password'), 'Senha deve ter pelo menos 8 caracteres')
+				return
+			}
+			
 			if (password !== confirm) {
-				showToast('Erro na validação', 'As senhas não coincidem', 'error')
+				showFieldError(registerForm.querySelector('#register-confirm'), 'As senhas não coincidem')
 				return
 			}
 			
@@ -104,6 +212,7 @@
 			
 			// Show loading state
 			submitBtn.classList.add('loading')
+			submitBtn.disabled = true
 			
 			try {
 				// Simulate API call
@@ -111,7 +220,7 @@
 				
 				// Store user data
 				const userData = {
-					name,
+					name: name.trim(),
 					email,
 					remember: true,
 					loggedIn: true,
@@ -137,11 +246,12 @@
 			} finally {
 				// Hide loading state
 				submitBtn.classList.remove('loading')
+				submitBtn.disabled = false
 			}
 		})
 	}
 
-	// Social login buttons
+	// Enhanced social login buttons
 	socialButtons.forEach(btn => {
 		btn.addEventListener('click', async (e) => {
 			e.preventDefault()
@@ -150,6 +260,7 @@
 			
 			// Show loading state
 			btn.classList.add('loading')
+			btn.disabled = true
 			btn.innerHTML = `
 				<svg class="spinner" viewBox="0 0 24 24">
 					<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="31.416" stroke-dashoffset="31.416">
@@ -213,6 +324,7 @@
 				}
 			} finally {
 				btn.classList.remove('loading')
+				btn.disabled = false
 			}
 		})
 	})
@@ -239,12 +351,78 @@
 		}
 	}
 
-	// Initialize
-	checkLoginStatus()
+	// Enhanced animations and interactions
+	function setupAnimations() {
+		// Animate feature items on scroll
+		const featureItems = document.querySelectorAll('.feature-item')
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry, index) => {
+				if (entry.isIntersecting) {
+					setTimeout(() => {
+						entry.target.style.opacity = '1'
+						entry.target.style.transform = 'translateX(0)'
+					}, index * 100)
+				}
+			})
+		}, { threshold: 0.1 })
+
+		featureItems.forEach(item => {
+			item.style.opacity = '0'
+			item.style.transform = 'translateX(-30px)'
+			item.style.transition = 'all 0.6s ease'
+			observer.observe(item)
+		})
+
+		// Animate stats on scroll
+		const statNumbers = document.querySelectorAll('.stat-number')
+		const statsObserver = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.style.opacity = '1'
+					entry.target.style.transform = 'scale(1)'
+				}
+			})
+		}, { threshold: 0.5 })
+
+		statNumbers.forEach(stat => {
+			stat.style.opacity = '0'
+			stat.style.transform = 'scale(0.8)'
+			stat.style.transition = 'all 0.6s ease'
+			statsObserver.observe(stat)
+		})
+	}
+
+	// Initialize everything
+	function init() {
+		checkLoginStatus()
+		setupFieldValidation()
+		setupAnimations()
+		
+		// Focus first input on page load
+		const firstInput = document.querySelector('input')
+		if (firstInput) firstInput.focus()
+		
+		// Add smooth scrolling for anchor links
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault()
+				const target = document.querySelector(this.getAttribute('href'))
+				if (target) {
+					target.scrollIntoView({
+						behavior: 'smooth',
+						block: 'start'
+					})
+				}
+			})
+		})
+	}
+
+	// Start when DOM is ready
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', init)
+	} else {
+		init()
+	}
 	
-	// Focus first input on page load
-	const firstInput = document.querySelector('input')
-	if (firstInput) firstInput.focus()
-	
-	console.log('🔐 Login page initialized successfully!')
+	console.log('🔐 Enhanced login page initialized successfully!')
 })()
