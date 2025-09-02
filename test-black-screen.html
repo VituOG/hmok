@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Teste - PulseX</title>
+	<link rel="icon" href="/favicon.svg" />
+	<style>
+		/* CSS básico para teste */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			background: #0a0a0f;
+			color: #ffffff;
+			font-family: Arial, sans-serif;
+			padding: 20px;
+		}
+		
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+		
+		.header {
+			background: rgba(255, 255, 255, 0.1);
+			padding: 20px;
+			margin-bottom: 20px;
+			border-radius: 10px;
+		}
+		
+		.content {
+			background: rgba(255, 255, 255, 0.05);
+			padding: 40px;
+			border-radius: 10px;
+		}
+		
+		h1 {
+			color: #00d4ff;
+			margin-bottom: 20px;
+		}
+		
+		p {
+			margin-bottom: 15px;
+			line-height: 1.6;
+		}
+		
+		.test-button {
+			background: linear-gradient(135deg, #00d4ff, #8b5cf6);
+			color: white;
+			padding: 15px 30px;
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+			font-size: 16px;
+			margin: 10px;
+		}
+		
+		.test-button:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 10px 20px rgba(0, 212, 255, 0.3);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1>🧪 Teste de Diagnóstico - PulseX</h1>
+			<p>Esta página foi criada para testar se o problema da tela preta é específico do CSS revolucionário.</p>
+		</div>
+		
+		<div class="content">
+			<h2>Status do Teste:</h2>
+			<p>✅ Se você consegue ver este conteúdo, o problema não é com o HTML básico.</p>
+			<p>✅ Se o fundo é escuro mas o texto é visível, o problema pode ser com o CSS revolucionário.</p>
+			<p>❌ Se você vê uma tela completamente preta, há um problema mais grave.</p>
+			
+			<h2>Teste de Interatividade:</h2>
+			<button class="test-button" onclick="alert('Botão funcionando!')">Testar JavaScript</button>
+			<button class="test-button" onclick="document.body.style.background = '#ff0000'">Mudar Cor de Fundo</button>
+			<button class="test-button" onclick="document.body.style.background = '#0a0a0f'">Restaurar Cor</button>
+			
+			<h2>Links de Teste:</h2>
+			<p><a href="/features.html" style="color: #00d4ff;">→ Ir para Features (pode ter problema)</a></p>
+			<p><a href="/download.html" style="color: #00d4ff;">→ Ir para Download (pode ter problema)</a></p>
+			<p><a href="/pricing.html" style="color: #00d4ff;">→ Ir para Pricing (pode ter problema)</a></p>
+			<p><a href="/changelog.html" style="color: #00d4ff;">→ Ir para Changelog (pode ter problema)</a></p>
+			<p><a href="/support.html" style="color: #00d4ff;">→ Ir para Support (pode ter problema)</a></p>
+			<p><a href="/" style="color: #00d4ff;">→ Voltar para Home</a></p>
+		</div>
+	</div>
+	
+	<script>
+		console.log('Teste de diagnóstico carregado com sucesso!');
+		console.log('Data/Hora:', new Date().toLocaleString());
+		console.log('User Agent:', navigator.userAgent);
+		console.log('Viewport:', window.innerWidth + 'x' + window.innerHeight);
+	</script>
+</body>
+</html>

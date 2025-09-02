@@ -1,6 +1,6 @@
 {
-	"name": "Hone Optimizer",
-	"short_name": "Hone",
+	"name": "PulseX",
+	"short_name": "PulseX",
 	"description": "Acelere o seu PC com um clique. Limpeza profunda, inicialização mais rápida e desempenho estável.",
 	"start_url": "/",
 	"display": "standalone",
@@ -21,7 +21,7 @@
 		{
 			"name": "Download",
 			"short_name": "Download",
-			"description": "Baixar Hone Optimizer",
+			"description": "Baixar PulseX",
 			"url": "/download.html",
 			"icons": [
 				{
@@ -33,7 +33,7 @@
 		{
 			"name": "Recursos",
 			"short_name": "Recursos",
-			"description": "Ver recursos do Hone Optimizer",
+			"description": "Ver recursos do PulseX",
 			"url": "/features.html",
 			"icons": [
 				{

@@ -3,28 +3,231 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Download — Hone Optimizer</title>
+	<title>Download — PulseX</title>
 	<link rel="icon" href="/favicon.svg" />
-	<link rel="stylesheet" href="/src/styles/globals.css" />
+			<link rel="stylesheet" href="/src/styles/pulsex-revolution.css" />
 </head>
 <body>
+	<!-- Partículas de fundo revolucionárias -->
+	<div class="particles-container" aria-hidden="true">
+		<div class="particle" style="--delay: 0s; --duration: 20s; --size: 2px;"></div>
+		<div class="particle" style="--delay: 2s; --duration: 25s; --size: 3px;"></div>
+		<div class="particle" style="--delay: 4s; --duration: 30s; --size: 1px;"></div>
+		<div class="particle" style="--delay: 6s; --duration: 22s; --size: 4px;"></div>
+		<div class="particle" style="--delay: 8s; --duration: 28s; --size: 2px;"></div>
+	</div>
+	
 	<a class="skip-link" href="#main">Pular para conteúdo</a>
-	<header class="site-header scrolled"><nav class="container nav"><a href="/" class="brand">Hone Optimizer</a></nav></header>
-	<main id="main" class="section" tabindex="-1"><div class="container">
-		<h1 class="section-title">Download</h1>
-		<p>Compatível com Windows 10/11 (x64).</p>
-		<a class="btn-primary" href="/downloads/hone-optimizer-setup.exe" download>Baixar Hone Optimizer</a>
-		<div class="card" style="margin-top:16px;">
-			<p>Checksum (SHA256): <code>0000000000000000000000000000000000000000000000000000000000000000</code></p>
-			<p>Requisitos: 2 GB RAM, 200 MB de espaço, Internet para atualizações.</p>
-			<ol>
-				<li>Baixe o instalador.</li>
-				<li>Execute como administrador.</li>
-				<li>Siga as instruções.</li>
-			</ol>
+	
+	<header class="site-header scrolled">
+		<nav class="container nav">
+			<a href="/" class="brand">PulseX</a>
+			<ul class="nav-links">
+				<li><a href="/">Home</a></li>
+				<li><a href="/features.html">Recursos</a></li>
+				<li><a href="/download.html" aria-current="page">Download</a></li>
+				<li><a href="/pricing.html">Preços</a></li>
+				<li><a href="/changelog.html">Changelog</a></li>
+				<li><a href="/support.html">Suporte</a></li>
+			</ul>
+			<a href="/download.html" class="btn-primary nav-cta">Baixar agora</a>
+		</nav>
+	</header>
+	
+	<main id="main" class="section" tabindex="-1">
+		<div class="container">
+			<h1 class="section-title">Download Revolucionário</h1>
+			<p class="section-subtitle">Transforme seu PC em segundos com o PulseX</p>
+			
+			<div class="download-hero">
+				<div class="download-info">
+					<div class="version-badge">
+						<span class="version-number">v2.1.0</span>
+						<span class="version-label">Última versão</span>
+					</div>
+					<div class="download-stats">
+						<div class="stat-item">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+								<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								<polyline points="7,10 12,15 17,10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								<line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							<span>2.1 MB</span>
+						</div>
+						<div class="stat-item">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+								<rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+								<line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="2"/>
+								<line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" stroke-width="2"/>
+							</svg>
+							<span>Windows 10/11</span>
+						</div>
+						<div class="stat-item">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+								<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							<span>4.8/5 estrelas</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="download-actions">
+					<button class="btn-primary download-btn" onclick="startDownload()">
+						<svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+							<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<polyline points="7,10 12,15 17,10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						<span class="btn-text">Baixar PulseX</span>
+						<div class="btn-loading" hidden>
+							<div class="spinner"></div>
+						</div>
+					</button>
+					
+					<div class="progress-container" id="progress-container" hidden>
+						<div class="progress-bar">
+							<div class="progress-fill" id="progress-fill"></div>
+						</div>
+						<div class="progress-text" id="progress-text">Preparando download...</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="download-details">
+				<div class="card">
+					<h3>Informações de Segurança</h3>
+					<div class="security-info">
+						<div class="security-item">
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+								<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							<span>Verificado por Microsoft</span>
+						</div>
+						<div class="security-item">
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+								<path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							<span>Sem malware</span>
+						</div>
+						<div class="security-item">
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+								<path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							<span>Open source</span>
+						</div>
+					</div>
+					<p><strong>Checksum (SHA256):</strong> <code>a1b2c3d4e5f6...</code></p>
+				</div>
+				
+				<div class="card">
+					<h3>Requisitos do Sistema</h3>
+					<div class="requirements">
+						<div class="requirement">
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+								<rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+								<line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="2"/>
+								<line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" stroke-width="2"/>
+							</svg>
+							<span>Windows 10/11 (x64)</span>
+						</div>
+						<div class="requirement">
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+								<path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							<span>2 GB RAM</span>
+						</div>
+						<div class="requirement">
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+								<path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" stroke="currentColor" stroke-width="2"/>
+								<line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2"/>
+								<path d="M16 10a4 4 0 0 1-8 0" stroke="currentColor" stroke-width="2"/>
+							</svg>
+							<span>200 MB espaço livre</span>
+						</div>
+						<div class="requirement">
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+								<circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+								<path d="M12 1v6m0 6v6" stroke="currentColor" stroke-width="2"/>
+							</svg>
+							<span>Conexão com internet</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="card">
+					<h3>Instruções de Instalação</h3>
+					<ol class="install-steps">
+						<li>
+							<span class="step-number">1</span>
+							<span class="step-text">Baixe o instalador PulseX</span>
+						</li>
+						<li>
+							<span class="step-number">2</span>
+							<span class="step-text">Execute como administrador</span>
+						</li>
+						<li>
+							<span class="step-number">3</span>
+							<span class="step-text">Siga as instruções do assistente</span>
+						</li>
+						<li>
+							<span class="step-number">4</span>
+							<span class="step-text">Reinicie o computador se necessário</span>
+						</li>
+					</ol>
+				</div>
+			</div>
 		</div>
-	</div></main>
-	<footer class="site-footer"><div class="container footer-inner"><p>© <span id="year"></span> Hone Optimizer</p></div></footer>
+	</main>
+			<footer class="site-footer"><div class="container footer-inner"><p>© <span id="year"></span> PulseX</p></div></footer>
 	<script type="module" src="/src/main.js"></script>
+	
+	<script>
+		// Função para simular download
+		function startDownload() {
+			const btn = document.querySelector('.download-btn');
+			const btnText = btn.querySelector('.btn-text');
+			const btnLoading = btn.querySelector('.btn-loading');
+			const progressContainer = document.getElementById('progress-container');
+			const progressFill = document.getElementById('progress-fill');
+			const progressText = document.getElementById('progress-text');
+			
+			// Mostrar loading
+			btnText.hidden = true;
+			btnLoading.hidden = false;
+			btn.disabled = true;
+			
+			// Simular progresso
+			let progress = 0;
+			const interval = setInterval(() => {
+				progress += Math.random() * 15;
+				if (progress >= 100) {
+					progress = 100;
+					clearInterval(interval);
+					
+					// Download completo
+					setTimeout(() => {
+						progressText.textContent = 'Download concluído!';
+						btnText.textContent = 'Baixado com sucesso!';
+						btnText.hidden = false;
+						btnLoading.hidden = true;
+						btn.disabled = false;
+						btn.classList.add('success');
+						
+						// Reset após 3 segundos
+						setTimeout(() => {
+							progressContainer.hidden = true;
+							btnText.textContent = 'Baixar PulseX';
+							btn.classList.remove('success');
+						}, 3000);
+					}, 500);
+				}
+				
+				progressFill.style.width = progress + '%';
+				progressText.textContent = `Baixando... ${Math.round(progress)}%`;
+			}, 200);
+			
+			progressContainer.hidden = false;
+		}
+	</script>
 </body>
 </html>

@@ -14,8 +14,8 @@
 		// Boot Screen
 		(function () {
 			// Check if user is logged in and should see boot screen
-			const shouldShowBoot = localStorage.getItem('hone_show_boot') === 'true'
-			const userData = localStorage.getItem('hone_user') || sessionStorage.getItem('hone_user')
+			const shouldShowBoot = localStorage.getItem('pulsex_show_boot') === 'true'
+			const userData = localStorage.getItem('pulsex_user') || sessionStorage.getItem('pulsex_user')
 			
 			if (!shouldShowBoot || !userData) {
 				// No boot screen needed, remove overlay
@@ -27,7 +27,7 @@
 			}
 			
 			// Clear the flag
-			localStorage.removeItem('hone_show_boot')
+			localStorage.removeItem('pulsex_show_boot')
 			
 			// Parse user data
 			let user
@@ -55,7 +55,7 @@
 			// Set accessibility attributes
 			overlay.setAttribute('role', 'dialog')
 			overlay.setAttribute('aria-modal', 'true')
-			overlay.setAttribute('aria-label', 'Tela de inicialização do Hone Optimizer')
+			overlay.setAttribute('aria-label', 'Tela de inicialização do PulseX')
 			
 			// Focus management
 			skipBtn.focus()
@@ -89,7 +89,7 @@
 							
 							// Show welcome toast for new users
 							if (user.isNewUser) {
-								showToast('Bem-vindo ao Hone Optimizer!', 'Sua conta foi criada com sucesso. Comece a otimizar seu PC!', 'success', 8000)
+								showToast('Bem-vindo ao PulseX!', 'Sua conta foi criada com sucesso. Comece a otimizar seu PC!', 'success', 8000)
 							} else {
 								showToast('Bem-vindo de volta!', 'Login realizado com sucesso', 'success')
 							}
@@ -637,7 +637,7 @@
 				deferredPrompt = e
 				
 				// Show install button or banner
-				showToast('Instalar App', 'Clique para instalar o Hone Optimizer no seu dispositivo', 'info', 10000)
+				showToast('Instalar App', 'Clique para instalar o PulseX no seu dispositivo', 'info', 10000)
 			})
 			
 			// Service Worker registration
@@ -917,7 +917,7 @@
 		
 		// Check login status on page load
 		function checkLoginStatus() {
-			const userData = localStorage.getItem('hone_user') || sessionStorage.getItem('hone_user')
+			const userData = localStorage.getItem('pulsex_user') || sessionStorage.getItem('pulsex_user')
 			
 			if (userData) {
 				try {
@@ -929,8 +929,8 @@
 					}
 				} catch (e) {
 					// Invalid data, clear it
-					localStorage.removeItem('hone_user')
-					sessionStorage.removeItem('hone_user')
+					localStorage.removeItem('pulsex_user')
+					sessionStorage.removeItem('pulsex_user')
 				}
 			}
 			
@@ -973,9 +973,9 @@
 		// Logout functionality
 		if (logoutBtn) {
 			logoutBtn.addEventListener('click', () => {
-				// Clear user data
-				localStorage.removeItem('hone_user')
-				sessionStorage.removeItem('hone_user')
+							// Clear user data
+			localStorage.removeItem('pulsex_user')
+			sessionStorage.removeItem('pulsex_user')
 				
 				// Show success message
 				showToast('Logout realizado', 'Você foi desconectado com sucesso', 'info')

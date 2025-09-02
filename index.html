@@ -5,31 +5,33 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="manifest" href="/public/manifest.json" />
 		<link rel="apple-touch-icon" href="/favicon.svg" />
+		<link rel="preload" href="/src/styles/globals.css" as="style" />
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" as="style" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Hone Optimizer</title>
+		<title>PulseX</title>
 		<meta name="description" content="Acelere o seu PC com um clique. Limpeza profunda, inicialização mais rápida e desempenho estável." />
 		<meta name="color-scheme" content="light" />
-		<meta property="og:title" content="Hone Optimizer" />
+		<meta property="og:title" content="PulseX" />
 		<meta property="og:description" content="Acelere o seu PC com um clique." />
-		<meta property="og:image" content="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MzAiIHZpZXdCb3g9IjAgMCAxMjAwIDYzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjMwIiBmaWxsPSIjZjVmNWY3Ii8+Cjx0ZXh0IHg9IjYwMCIgeT0iMzE1IiBmb250LWZtaWxseT0iSW50ZXIiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiMxZDFmMjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkhvbmUgT3B0aW1pemVyPC90ZXh0Pgo8L3N2Zz4K" />
+		<meta property="og:image" content="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MzAiIHZpZXdCb3g9IjAgMCAxMjAwIDYzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjMwIiBmaWxsPSIjZjVmNWY3Ii8+Cjx0ZXh0IHg9IjYwMCIgeT0iMzE1IiBmb250LWZtaWxseT0iSW50ZXIiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiMxZDFmMjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlB1bHNlWDwvdGV4dD4KPC9zdmc+Cg==" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="/" />
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="Hone Optimizer" />
+		<meta name="twitter:title" content="PulseX" />
 		<meta name="twitter:description" content="Acelere o seu PC com um clique." />
-		<meta name="twitter:image" content="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MzAiIHZpZXdCb3g9IjAgMCAxMjAwIDYzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjMwIiBmaWxsPSIjZjVmNWY3Ii8+Cjx0ZXh0IHg9IjYwMCIgeT0iMzE1IiBmb250LWZtaWxseT0iSW50ZXIiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiMxZDFmMjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkhvbmUgT3B0aW1pemVyPC90ZXh0Pgo8L3N2Zz4K" />
+		<meta name="twitter:image" content="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MzAiIHZpZXdCb3g9IjAgMCAxMjAwIDYzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjMwIiBmaWxsPSIjZjVmNWY3Ii8+Cjx0ZXh0IHg9IjYwMCIgeT0iMzE1IiBmb250LWZtaWxseT0iSW50ZXIiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiMxZDFmMjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlB1bHNlWDwvdGV4dD4KPC9zdmc+Cg==" />
 		<link rel="canonical" href="/" />
 		<meta name="theme-color" content="#1e1f22" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
-		<link rel="stylesheet" href="/src/styles/globals.css" />
+		<link rel="stylesheet" href="/src/styles/pulsex-revolution.css" />
 		<link rel="prefetch" href="/download.html" as="document" />
 		<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
 			"@type": "SoftwareApplication",
-			"name": "Hone Optimizer",
+			"name": "PulseX",
 			"operatingSystem": "Windows 10/11",
 			"applicationCategory": "UtilitiesApplication",
 			"description": "Acelere o seu PC com um clique. Limpeza profunda, inicialização mais rápida e desempenho estável.",
@@ -43,10 +45,12 @@
 	</head>
 	<body>
 		<a class="skip-link" href="#main">Pular para conteúdo</a>
+		<a class="skip-link" href="#features">Pular para recursos</a>
+		<a class="skip-link" href="#faq">Pular para FAQ</a>
 		<!-- Header -->
 		<header class="site-header" role="banner">
 			<nav class="container nav" aria-label="Primária">
-				<a href="/" class="brand">Hone Optimizer</a>
+				<a href="/" class="brand">PulseX</a>
 				<ul class="nav-links" id="nav-links">
 					<li><a href="/" aria-current="page">Home</a></li>
 					<li><a href="/features.html">Recursos</a></li>
@@ -101,7 +105,7 @@
 						</div>
 					</div>
 				</div>
-				<button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
+				<button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema" data-theme="light">
 					<svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
 						<circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
 						<path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -132,46 +136,192 @@
 			</div>
 		</header>
 
+		<!-- Breadcrumbs -->
+		<nav class="breadcrumbs" aria-label="Breadcrumb">
+			<div class="container">
+				<ol class="breadcrumb-list">
+					<li class="breadcrumb-item">
+						<a href="/" class="breadcrumb-link">Home</a>
+					</li>
+					<li class="breadcrumb-item" aria-current="page">
+						<span class="breadcrumb-current">Página Atual</span>
+					</li>
+				</ol>
+			</div>
+		</nav>
+
 		<main id="main" tabindex="-1">
-		<!-- Hero com efeitos de fundo -->
+		<!-- Partículas de fundo revolucionárias -->
+		<div class="particles-container" aria-hidden="true">
+			<div class="particle" style="--delay: 0s; --duration: 20s; --size: 2px;"></div>
+			<div class="particle" style="--delay: 2s; --duration: 25s; --size: 3px;"></div>
+			<div class="particle" style="--delay: 4s; --duration: 30s; --size: 1px;"></div>
+			<div class="particle" style="--delay: 6s; --duration: 22s; --size: 4px;"></div>
+			<div class="particle" style="--delay: 8s; --duration: 28s; --size: 2px;"></div>
+			<div class="particle" style="--delay: 10s; --duration: 24s; --size: 3px;"></div>
+			<div class="particle" style="--delay: 12s; --duration: 26s; --size: 1px;"></div>
+			<div class="particle" style="--delay: 14s; --duration: 32s; --size: 2px;"></div>
+		</div>
+		
+		<!-- Hero com efeitos de fundo revolucionários -->
 		<section class="section hero">
-			<div class="fx animated-gradient" aria-hidden="true"></div>
-			<div class="fx blobs" aria-hidden="true">
-				<div class="blob a"></div>
-				<div class="blob b"></div>
+			<!-- Efeitos de gradiente animados -->
+			<div class="hero-gradients" aria-hidden="true">
+				<div class="gradient-orb orb-1"></div>
+				<div class="gradient-orb orb-2"></div>
+				<div class="gradient-orb orb-3"></div>
+			</div>
+			
+			<!-- Linhas de energia -->
+			<div class="energy-lines" aria-hidden="true">
+				<div class="energy-line line-1"></div>
+				<div class="energy-line line-2"></div>
+				<div class="energy-line line-3"></div>
 			</div>
 			<div class="container hero-inner">
-				<h1 class="heading-hero">Acelere o seu PC com um clique</h1>
+				<h1 class="heading-hero">PulseX - Acelere o seu PC com um clique</h1>
 				<p class="sub-hero">Limpeza profunda, inicialização mais rápida e desempenho estável — tudo em minutos.</p>
 				<div class="hero-ctas">
 					<a href="/download.html" class="btn-primary">Baixar agora</a>
 					<a href="#features" class="btn-secondary">Ver recursos</a>
 				</div>
 				<div class="hero-badges">
-					<span>+2M de downloads</span>
-					<span>Compatível com Windows 10/11</span>
+					<span class="badge">
+						<svg class="badge-icon" width="16" height="16" viewBox="0 0 24 24" fill="none">
+							<path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						+2M de downloads
+					</span>
+					<span class="badge">
+						<svg class="badge-icon" width="16" height="16" viewBox="0 0 24 24" fill="none">
+							<rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+							<line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="2"/>
+							<line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" stroke-width="2"/>
+						</svg>
+						Compatível com Windows 10/11
+					</span>
 				</div>
 			</div>
 		</section>
 
-		<!-- Barra de métricas -->
-		<section class="section">
+		<!-- Barra de métricas revolucionária -->
+		<section class="section stats-section">
 			<div class="container stats">
 				<div class="stat-card">
+					<div class="stat-icon">
+						<svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+							<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
 					<span class="stat-value" data-count="-45" data-suffix="%"></span>
 					<p class="stat-label">Tempo de boot</p>
+					<div class="stat-progress">
+						<div class="progress-bar" style="--progress: 45%"></div>
+					</div>
 				</div>
 				<div class="stat-card">
+					<div class="stat-icon">
+						<svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+							<path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
 					<span class="stat-value" data-count="12" data-suffix="GB"></span>
 					<p class="stat-label">Espaço liberado</p>
+					<div class="stat-progress">
+						<div class="progress-bar" style="--progress: 75%"></div>
+					</div>
 				</div>
 				<div class="stat-card">
+					<div class="stat-icon">
+						<svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+							<rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+							<line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="2"/>
+							<line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" stroke-width="2"/>
+						</svg>
+					</div>
 					<span class="stat-value" data-count="150" data-suffix="+"></span>
 					<p class="stat-label">Apps otimizados</p>
+					<div class="stat-progress">
+						<div class="progress-bar" style="--progress: 90%"></div>
+					</div>
 				</div>
 				<div class="stat-card">
+					<div class="stat-icon">
+						<svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+							<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
 					<span class="stat-value" data-count="4.8" data-decimals="1" data-suffix="★"></span>
 					<p class="stat-label">Satisfação</p>
+					<div class="stat-progress">
+						<div class="progress-bar" style="--progress: 96%"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Simulador de Performance -->
+		<section class="section performance-simulator">
+			<div class="container">
+				<h2 class="section-title">Simulador de Performance</h2>
+				<p class="section-subtitle">Veja quanto o PulseX pode melhorar o seu PC</p>
+				
+				<div class="simulator-grid">
+					<div class="simulator-card">
+						<h3>Antes da Otimização</h3>
+						<div class="performance-metrics">
+							<div class="metric">
+								<span class="metric-label">Tempo de Boot</span>
+								<span class="metric-value before">2m 30s</span>
+							</div>
+							<div class="metric">
+								<span class="metric-label">Uso de RAM</span>
+								<span class="metric-value before">4.2 GB</span>
+							</div>
+							<div class="metric">
+								<span class="metric-label">Espaço em Disco</span>
+								<span class="metric-value before">45 GB</span>
+							</div>
+							<div class="metric">
+								<span class="metric-label">Temperatura CPU</span>
+								<span class="metric-value before">75°C</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="simulator-arrow">
+						<svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+							<path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					
+					<div class="simulator-card optimized">
+						<h3>Após Otimização</h3>
+						<div class="performance-metrics">
+							<div class="metric">
+								<span class="metric-label">Tempo de Boot</span>
+								<span class="metric-value after">45s</span>
+							</div>
+							<div class="metric">
+								<span class="metric-label">Uso de RAM</span>
+								<span class="metric-value after">2.8 GB</span>
+							</div>
+							<div class="metric">
+								<span class="metric-label">Espaço em Disco</span>
+								<span class="metric-value after">33 GB</span>
+							</div>
+							<div class="metric">
+								<span class="metric-label">Temperatura CPU</span>
+								<span class="metric-value after">62°C</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="simulator-cta">
+					<button class="btn-primary" onclick="showToast('🚀 Simulação baseada em dados reais de usuários!', 'info')">
+						Ver Relatório Detalhado
+					</button>
 				</div>
 			</div>
 		</section>
@@ -181,7 +331,7 @@
 			<div class="container">
 				<div class="section-header">
 					<h2>Recursos</h2>
-					<p>Descubra como o Hone Optimizer pode transformar o desempenho do seu PC</p>
+					<p>Descubra como o PulseX pode transformar o desempenho do seu PC</p>
 				</div>
 
 				<!-- Filter System -->
@@ -326,10 +476,10 @@
 		<!-- CTA final -->
 		<section class="section">
 			<div class="container cta">
-				<h3>Pronto para destravar desempenho?</h3>
+				<h3>Pronto para destravar o poder do PulseX?</h3>
 				<div class="cta-buttons">
 					<button class="btn-primary btn-download" id="download-btn">
-						<span class="btn-text">Baixar Hone Optimizer</span>
+						<span class="btn-text">Baixar PulseX</span>
 						<span class="btn-loading" hidden>
 							<svg class="spinner" viewBox="0 0 24 24">
 								<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="31.416" stroke-dashoffset="31.416">
@@ -346,15 +496,26 @@
 						<div class="progress-text" id="progress-text">Preparando download...</div>
 					</div>
 				</div>
+				
+				<!-- Loading States para outras ações -->
+				<div class="loading-states" id="loading-states" hidden>
+					<div class="loading-item">
+						<div class="loading-spinner"></div>
+						<span>Processando...</span>
+					</div>
+				</div>
 			</div>
 		</section>
 
 		</main>
 
+		<!-- Toast Notifications -->
+		<div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
 		<!-- Footer -->
 		<footer class="site-footer" role="contentinfo">
 			<div class="container footer-inner">
-				<p>© <span id="year"></span> Hone Optimizer. Todos os direitos reservados.</p>
+				<p>© <span id="year"></span> PulseX. Todos os direitos reservados.</p>
 				<div class="badges">
 					<span class="badge">v1.0.0</span>
 					<span class="badge">Feito com ♡</span>
@@ -363,5 +524,372 @@
 		</footer>
 
 		<script src="/src/main.js"></script>
+		<script>
+			// Sistema de Toast Notifications
+			function showToast(message, type = 'info', duration = 5000) {
+				const container = document.getElementById('toast-container');
+				const toast = document.createElement('div');
+				toast.className = `toast ${type}`;
+				
+				const icons = {
+					success: '✅',
+					error: '❌',
+					warning: '⚠️',
+					info: 'ℹ️'
+				};
+				
+				toast.innerHTML = `
+					<span class="toast-icon">${icons[type]}</span>
+					<span class="toast-message">${message}</span>
+					<button class="toast-close" onclick="this.parentElement.remove()">×</button>
+				`;
+				
+				container.appendChild(toast);
+				
+				// Auto-remove após duração
+				setTimeout(() => {
+					if (toast.parentElement) {
+						toast.style.animation = 'toast-out 0.3s ease';
+						setTimeout(() => toast.remove(), 300);
+					}
+				}, duration);
+			}
+			
+			// Sistema de Loading States
+			function showLoading(message = 'Processando...') {
+				const loadingStates = document.getElementById('loading-states');
+				const loadingItem = loadingStates.querySelector('.loading-item span');
+				loadingItem.textContent = message;
+				loadingStates.hidden = false;
+			}
+			
+			function hideLoading() {
+				document.getElementById('loading-states').hidden = true;
+			}
+			
+			// Navegação por Teclado
+			document.addEventListener('keydown', function(e) {
+				// Ctrl+K para busca global
+				if (e.ctrlKey && e.key === 'k') {
+					e.preventDefault();
+					showToast('🔍 Busca global ativada!', 'info');
+				}
+				
+				// Ctrl+Enter para ações principais
+				if (e.ctrlKey && e.key === 'Enter') {
+					e.preventDefault();
+					document.getElementById('download-btn').click();
+				}
+				
+				// Escape para fechar menus
+				if (e.key === 'Escape') {
+					const mobileMenu = document.getElementById('mobile-menu');
+					if (mobileMenu && !mobileMenu.hidden) {
+						document.getElementById('menu-toggle').click();
+					}
+				}
+			});
+			
+			// Melhorar navegação por Tab
+			document.addEventListener('keydown', function(e) {
+				if (e.key === 'Tab') {
+					document.body.classList.add('keyboard-navigation');
+				}
+			});
+			
+			document.addEventListener('mousedown', function() {
+				document.body.classList.remove('keyboard-navigation');
+			});
+			
+			// Sistema de Temas
+			const themeToggle = document.getElementById('theme-toggle');
+			const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+			
+			// Carregar tema salvo
+			function loadTheme() {
+				const savedTheme = localStorage.getItem('pulsex-theme');
+				const theme = savedTheme || (prefersDark.matches ? 'dark' : 'light');
+				applyTheme(theme);
+			}
+			
+			// Aplicar tema
+			function applyTheme(theme) {
+				document.documentElement.setAttribute('data-theme', theme);
+				themeToggle.setAttribute('data-theme', theme);
+				
+				if (theme === 'dark') {
+					themeToggle.querySelector('.sun-icon').hidden = true;
+					themeToggle.querySelector('.moon-icon').hidden = false;
+				} else {
+					themeToggle.querySelector('.sun-icon').hidden = false;
+					themeToggle.querySelector('.moon-icon').hidden = true;
+				}
+				
+				localStorage.setItem('pulsex-theme', theme);
+			}
+			
+			// Toggle de tema
+			themeToggle.addEventListener('click', () => {
+				const currentTheme = document.documentElement.getAttribute('data-theme');
+				const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+				applyTheme(newTheme);
+				showToast(`🌙 Tema ${newTheme === 'dark' ? 'escuro' : 'claro'} ativado!`, 'success');
+			});
+			
+			// Carregar tema ao iniciar
+			loadTheme();
+			
+			// Sistema de Favoritos funcional
+			document.querySelectorAll('.favorite-btn').forEach(btn => {
+				btn.addEventListener('click', function() {
+					const item = this.getAttribute('data-item');
+					const isFavorited = this.classList.contains('favorited');
+					
+					if (isFavorited) {
+						this.classList.remove('favorited');
+						showToast(`❌ "${item}" removido dos favoritos`, 'info');
+					} else {
+						this.classList.add('favorited');
+						showToast(`❤️ "${item}" adicionado aos favoritos`, 'success');
+					}
+				});
+			});
+			
+			// Melhorar botão de download
+			document.getElementById('download-btn').addEventListener('click', function() {
+				const btnText = this.querySelector('.btn-text');
+				const btnLoading = this.querySelector('.btn-loading');
+				const progressContainer = document.getElementById('progress-container');
+				
+				// Mostrar loading
+				btnText.hidden = true;
+				btnLoading.hidden = false;
+				this.disabled = true;
+				
+				// Simular progresso
+				setTimeout(() => {
+					progressContainer.hidden = false;
+					simulateDownload();
+				}, 1000);
+			});
+			
+			function simulateDownload() {
+				const progressFill = document.getElementById('progress-fill');
+				const progressText = document.getElementById('progress-text');
+				let progress = 0;
+				
+				const interval = setInterval(() => {
+					progress += Math.random() * 15;
+					if (progress >= 100) {
+						progress = 100;
+						clearInterval(interval);
+						progressText.textContent = 'Download concluído!';
+						showToast('🎉 PulseX baixado com sucesso!', 'success');
+						
+						// Reset do botão
+						setTimeout(() => {
+							document.getElementById('download-btn').querySelector('.btn-text').hidden = false;
+							document.getElementById('download-btn').querySelector('.btn-loading').hidden = true;
+							document.getElementById('download-btn').disabled = false;
+							document.getElementById('progress-container').hidden = true;
+							document.getElementById('progress-fill').style.width = '0%';
+						}, 2000);
+					} else {
+						progressFill.style.width = progress + '%';
+						progressText.textContent = `Baixando... ${Math.round(progress)}%`;
+					}
+				}, 200);
+			}
+			
+			// ========================================
+			// PULSEX REVOLUTION - SISTEMA DE ANIMAÇÕES AVANÇADAS
+			// ========================================
+			
+			// Sistema de animações baseadas em scroll
+			function initScrollAnimations() {
+				const observerOptions = {
+					threshold: 0.1,
+					rootMargin: '0px 0px -50px 0px'
+				};
+				
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add('animate-fade-in-up');
+							observer.unobserve(entry.target);
+						}
+					});
+				}, observerOptions);
+				
+				// Observar elementos para animação
+				document.querySelectorAll('.card, .stat-card, .simulator-card').forEach(el => {
+					observer.observe(el);
+				});
+			}
+			
+			// Sistema de partículas interativo
+			function initParticleSystem() {
+				document.addEventListener('mousemove', (e) => {
+					if (Math.random() > 0.98) {
+						createParticle(e.clientX, e.clientY);
+					}
+				});
+			}
+			
+			function createParticle(x, y) {
+				const particle = document.createElement('div');
+				particle.className = 'particle';
+				particle.style.left = x + 'px';
+				particle.style.top = y + 'px';
+				particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
+				particle.style.setProperty('--size', (Math.random() * 3 + 1) + 'px');
+				
+				document.querySelector('.particles-container').appendChild(particle);
+				
+				setTimeout(() => {
+					particle.remove();
+				}, 5000);
+			}
+			
+			// Contadores animados revolucionários
+			function initPerformanceCounters() {
+				const counters = document.querySelectorAll('[data-count]');
+				
+				const animateCounter = (counter) => {
+					const target = parseInt(counter.dataset.count);
+					const suffix = counter.dataset.suffix || '';
+					const decimals = counter.dataset.decimals || 0;
+					const duration = 2000;
+					const start = performance.now();
+					
+					const updateCounter = (currentTime) => {
+						const elapsed = currentTime - start;
+						const progress = Math.min(elapsed / duration, 1);
+						
+						const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+						const current = target * easeOutQuart;
+						
+						if (decimals > 0) {
+							counter.textContent = current.toFixed(decimals) + suffix;
+						} else {
+							counter.textContent = Math.floor(current) + suffix;
+						}
+						
+						if (progress < 1) {
+							requestAnimationFrame(updateCounter);
+						}
+					};
+					
+					requestAnimationFrame(updateCounter);
+				};
+				
+				// Observar contadores
+				const counterObserver = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							animateCounter(entry.target);
+							counterObserver.unobserve(entry.target);
+						}
+					});
+				}, { threshold: 0.5 });
+				
+				counters.forEach(counter => counterObserver.observe(counter));
+			}
+			
+			// Sistema de filtros avançado
+			function initFilterSystem() {
+				const filterTabs = document.querySelectorAll('.filter-tab');
+				const filterInput = document.getElementById('filter-search');
+				const featuresGrid = document.getElementById('features-grid');
+				
+				if (!featuresGrid) return;
+				
+				let currentFilter = 'all';
+				let currentSearch = '';
+				
+				// Filtros por categoria
+				filterTabs.forEach(tab => {
+					tab.addEventListener('click', () => {
+						filterTabs.forEach(t => t.classList.remove('active'));
+						tab.classList.add('active');
+						currentFilter = tab.dataset.filter;
+						applyFilters();
+					});
+				});
+				
+				// Busca
+				if (filterInput) {
+					filterInput.addEventListener('input', (e) => {
+						currentSearch = e.target.value.toLowerCase();
+						applyFilters();
+					});
+				}
+				
+				function applyFilters() {
+					const cards = featuresGrid.querySelectorAll('.card');
+					
+					cards.forEach(card => {
+						const filters = card.dataset.filter || '';
+						const title = card.querySelector('h3').textContent.toLowerCase();
+						const description = card.querySelector('p').textContent.toLowerCase();
+						
+						const matchesFilter = currentFilter === 'all' || filters.includes(currentFilter);
+						const matchesSearch = !currentSearch || 
+							title.includes(currentSearch) || 
+							description.includes(currentSearch);
+						
+						if (matchesFilter && matchesSearch) {
+							card.style.display = 'block';
+							card.style.animation = 'fadeInUp 0.6s ease-out';
+						} else {
+							card.style.display = 'none';
+						}
+					});
+				}
+			}
+			
+			// Header scroll effect revolucionário
+			function initHeaderScroll() {
+				const header = document.querySelector('.site-header');
+				let lastScrollY = window.scrollY;
+				
+				window.addEventListener('scroll', () => {
+					const currentScrollY = window.scrollY;
+					
+					if (currentScrollY > 100) {
+						header.classList.add('scrolled');
+					} else {
+						header.classList.remove('scrolled');
+					}
+					
+					// Efeito de parallax sutil
+					if (currentScrollY > lastScrollY && currentScrollY > 200) {
+						header.style.transform = 'translateY(-100%)';
+					} else {
+						header.style.transform = 'translateY(0)';
+					}
+					
+					lastScrollY = currentScrollY;
+				});
+			}
+			
+			// Inicializar todos os sistemas revolucionários
+			document.addEventListener('DOMContentLoaded', () => {
+				initScrollAnimations();
+				initParticleSystem();
+				initPerformanceCounters();
+				initFilterSystem();
+				initHeaderScroll();
+				
+				// Carregar tema salvo
+				const savedTheme = localStorage.getItem('pulsex-theme') || 'dark';
+				document.documentElement.setAttribute('data-theme', savedTheme);
+				
+				// Efeito de entrada revolucionário
+				setTimeout(() => {
+					document.body.classList.add('loaded');
+				}, 100);
+			});
+		</script>
 	</body>
 </html>

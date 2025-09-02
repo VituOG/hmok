@@ -3,34 +3,229 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Suporte — Hone Optimizer</title>
+	<title>Suporte — PulseX</title>
 	<link rel="icon" href="/favicon.svg" />
-	<link rel="stylesheet" href="/src/styles/globals.css" />
+			<link rel="stylesheet" href="/src/styles/pulsex-revolution.css" />
 </head>
 <body>
+	<!-- Partículas de fundo revolucionárias -->
+	<div class="particles-container" aria-hidden="true">
+		<div class="particle" style="--delay: 0s; --duration: 20s; --size: 2px;"></div>
+		<div class="particle" style="--delay: 2s; --duration: 25s; --size: 3px;"></div>
+		<div class="particle" style="--delay: 4s; --duration: 30s; --size: 1px;"></div>
+		<div class="particle" style="--delay: 6s; --duration: 22s; --size: 4px;"></div>
+		<div class="particle" style="--delay: 8s; --duration: 28s; --size: 2px;"></div>
+	</div>
+	
 	<a class="skip-link" href="#main">Pular para conteúdo</a>
-	<header class="site-header scrolled"><nav class="container nav"><a href="/" class="brand">Hone Optimizer</a></nav></header>
-	<main id="main" class="section" tabindex="-1"><div class="container" style="display:grid;gap:24px;grid-template-columns:1fr;">
-		<section>
-			<h1 class="section-title">Suporte</h1>
-			<form class="card" style="margin-top:12px;display:flex;flex-direction:column;gap:12px;" onsubmit="event.preventDefault(); this.querySelector('.ok').hidden=false;">
-				<label>Nome<input required style="margin-top:6px" class="input" /></label>
-				<label>Email<input type="email" required style="margin-top:6px" class="input" /></label>
-				<label>Categoria<select class="input" style="margin-top:6px"><option>Instalação</option><option>Licença</option><option>Desempenho</option></select></label>
-				<label>Mensagem<textarea class="input" style="margin-top:6px;height:120px"></textarea></label>
-				<button class="btn-primary" type="submit">Enviar</button>
-				<p class="ok" hidden style="color:#34d399">Mensagem enviada!</p>
-			</form>
-		</section>
-		<section>
-			<h2 class="section-title">Base de conhecimento</h2>
-			<div class="features-grid" style="margin-top:12px;grid-template-columns:1fr;">
-				<article class="card"><h3>Requisitos mínimos</h3><p>Confirme memória, disco e versão do Windows.</p></article>
-				<article class="card"><h3>Limpeza segura</h3><p>Arquivos pessoais não são alterados.</p></article>
+	
+	<header class="site-header scrolled">
+		<nav class="container nav">
+			<a href="/" class="brand">PulseX</a>
+			<ul class="nav-links">
+				<li><a href="/">Home</a></li>
+				<li><a href="/features.html">Recursos</a></li>
+				<li><a href="/download.html">Download</a></li>
+				<li><a href="/pricing.html">Preços</a></li>
+				<li><a href="/changelog.html">Changelog</a></li>
+				<li><a href="/support.html" aria-current="page">Suporte</a></li>
+			</ul>
+			<a href="/download.html" class="btn-primary nav-cta">Baixar agora</a>
+		</nav>
+	</header>
+	
+	<main id="main" class="section" tabindex="-1">
+		<div class="container">
+			<h1 class="section-title">Suporte Revolucionário</h1>
+			<p class="section-subtitle">Estamos aqui para ajudar você a aproveitar ao máximo o PulseX</p>
+			
+			<div class="support-grid">
+				<section class="support-section">
+					<h2>Entre em Contato</h2>
+					<form class="support-form card" onsubmit="handleSupportSubmit(event)">
+						<div class="form-group">
+							<label for="name">Nome completo</label>
+							<input type="text" id="name" name="name" required class="form-input" />
+						</div>
+						
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" id="email" name="email" required class="form-input" />
+						</div>
+						
+						<div class="form-group">
+							<label for="category">Categoria</label>
+							<select id="category" name="category" class="form-input">
+								<option value="installation">Instalação</option>
+								<option value="license">Licença</option>
+								<option value="performance">Desempenho</option>
+								<option value="bug">Bug/Problema</option>
+								<option value="feature">Sugestão</option>
+								<option value="other">Outro</option>
+							</select>
+						</div>
+						
+						<div class="form-group">
+							<label for="priority">Prioridade</label>
+							<select id="priority" name="priority" class="form-input">
+								<option value="low">Baixa</option>
+								<option value="medium" selected>Média</option>
+								<option value="high">Alta</option>
+								<option value="urgent">Urgente</option>
+							</select>
+						</div>
+						
+						<div class="form-group">
+							<label for="message">Mensagem</label>
+							<textarea id="message" name="message" required class="form-input" rows="6" placeholder="Descreva detalhadamente sua dúvida ou problema..."></textarea>
+						</div>
+						
+						<button type="submit" class="btn-primary submit-btn">
+							<span class="btn-text">Enviar Mensagem</span>
+							<div class="btn-loading" hidden>
+								<div class="spinner"></div>
+							</div>
+						</button>
+						
+						<div class="success-message" id="success-message" hidden>
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+								<path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							<span>Mensagem enviada com sucesso! Responderemos em até 24 horas.</span>
+						</div>
+					</form>
+				</section>
+				
+				<section class="support-section">
+					<h2>Base de Conhecimento</h2>
+					<div class="knowledge-base">
+						<article class="knowledge-card card">
+							<div class="card-header">
+								<h3>Requisitos do Sistema</h3>
+								<div class="card-icon">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+										<rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+										<line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="2"/>
+										<line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" stroke-width="2"/>
+									</svg>
+								</div>
+							</div>
+							<p>Confirme se seu sistema atende aos requisitos mínimos: Windows 10/11, 2GB RAM, 200MB espaço livre.</p>
+							<a href="#" class="read-more">Ler mais →</a>
+						</article>
+						
+						<article class="knowledge-card card">
+							<div class="card-header">
+								<h3>Limpeza Segura</h3>
+								<div class="card-icon">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+										<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</div>
+							</div>
+							<p>O PulseX é 100% seguro. Seus arquivos pessoais nunca são alterados ou removidos.</p>
+							<a href="#" class="read-more">Ler mais →</a>
+						</article>
+						
+						<article class="knowledge-card card">
+							<div class="card-header">
+								<h3>Instalação</h3>
+								<div class="card-icon">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+										<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										<polyline points="7,10 12,15 17,10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										<line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</div>
+							</div>
+							<p>Guia passo a passo para instalar o PulseX corretamente em seu computador.</p>
+							<a href="#" class="read-more">Ler mais →</a>
+						</article>
+						
+						<article class="knowledge-card card">
+							<div class="card-header">
+								<h3>Solução de Problemas</h3>
+								<div class="card-icon">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+										<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										<line x1="12" y1="9" x2="12" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										<line x1="12" y1="17" x2="12.01" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</div>
+							</div>
+							<p>Problemas comuns e suas soluções para garantir o funcionamento perfeito.</p>
+							<a href="#" class="read-more">Ler mais →</a>
+						</article>
+					</div>
+				</section>
 			</div>
-		</section>
-	</div></main>
-	<footer class="site-footer"><div class="container footer-inner"><p>© <span id="year"></span> Hone Optimizer</p></div></footer>
+			
+			<div class="support-stats">
+				<div class="stat-item">
+					<div class="stat-number">24h</div>
+					<div class="stat-label">Tempo de resposta</div>
+				</div>
+				<div class="stat-item">
+					<div class="stat-number">99%</div>
+					<div class="stat-label">Satisfação</div>
+				</div>
+				<div class="stat-item">
+					<div class="stat-number">24/7</div>
+					<div class="stat-label">Suporte disponível</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="site-footer"><div class="container footer-inner"><p>© <span id="year"></span> PulseX</p></div></footer>
 	<script type="module" src="/src/main.js"></script>
+	
+	<script>
+		// Função para enviar formulário de suporte
+		function handleSupportSubmit(event) {
+			event.preventDefault();
+			
+			const form = event.target;
+			const submitBtn = form.querySelector('.submit-btn');
+			const btnText = submitBtn.querySelector('.btn-text');
+			const btnLoading = submitBtn.querySelector('.btn-loading');
+			const successMessage = document.getElementById('success-message');
+			
+			// Mostrar loading
+			btnText.hidden = true;
+			btnLoading.hidden = false;
+			submitBtn.disabled = true;
+			
+			// Simular envio
+			setTimeout(() => {
+				// Mostrar sucesso
+				successMessage.hidden = false;
+				btnText.textContent = 'Mensagem enviada!';
+				btnText.hidden = false;
+				btnLoading.hidden = true;
+				submitBtn.disabled = false;
+				
+				// Reset form
+				form.reset();
+				
+				// Esconder mensagem após 5 segundos
+				setTimeout(() => {
+					successMessage.hidden = true;
+					btnText.textContent = 'Enviar Mensagem';
+				}, 5000);
+			}, 2000);
+		}
+		
+		// Animação dos cards de conhecimento
+		const knowledgeCards = document.querySelectorAll('.knowledge-card');
+		knowledgeCards.forEach(card => {
+			card.addEventListener('mouseenter', function() {
+				this.style.transform = 'translateY(-4px)';
+			});
+			
+			card.addEventListener('mouseleave', function() {
+				this.style.transform = '';
+			});
+		});
+	</script>
 </body>
 </html>

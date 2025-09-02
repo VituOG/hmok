@@ -3,7 +3,7 @@ import { Outlet, useNavigate } from 'react-router-dom'
 import { getUserLocale, t } from '@/lib/i18n'
 import AnimatedGradient from './BackgroundFX/AnimatedGradient'
 
-const SESSION_KEY = 'hone:splash:seen'
+const SESSION_KEY = 'pulsex:splash:seen'
 
 export default function BootScreen() {
 	const navigate = useNavigate()

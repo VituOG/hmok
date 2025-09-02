@@ -1,6 +1,6 @@
-# 🚀 Hone Optimizer - Site Melhorado
+# 🚀 PulseX - Site Melhorado
 
-Um site moderno e otimizado para o Hone Optimizer, com 20 melhorias implementadas incluindo sistema de login, dark mode, PWA e muito mais.
+Um site moderno e otimizado para o PulseX, com 20 melhorias implementadas incluindo sistema de login, dark mode, PWA e muito mais.
 
 ## ✨ Melhorias Implementadas
 
@@ -86,7 +86,7 @@ Um site moderno e otimizado para o Hone Optimizer, com 20 melhorias implementada
 ## 📁 Estrutura do Projeto
 
 ```
-hmok/
+pulsex/
 ├── index.html              # Página principal
 ├── src/
 │   ├── main.js            # JavaScript principal
@@ -140,7 +140,7 @@ Todas as funcionalidades estão organizadas em módulos no `src/main.js` e podem
 
 ## 📄 Licença
 
-Este projeto é parte do Hone Optimizer e está sujeito aos termos de uso da empresa.
+Este projeto é parte do PulseX e está sujeito aos termos de uso da empresa.
 
 ---
 

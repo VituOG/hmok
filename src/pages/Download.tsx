@@ -3,7 +3,7 @@ import Footer from '@/components/Footer'
 import { trackDownloadClick } from '@/lib/analytics'
 
 export default function Download() {
-	const href = '/downloads/hone-optimizer-setup.exe'
+	const href = '/downloads/pulsex-setup.exe'
 	return (
 		<main>
 			<Navbar />
@@ -17,7 +17,7 @@ export default function Download() {
 						download
 						onClick={() => trackDownloadClick('windows_exe')}
 					>
-						Baixar Hone Optimizer
+						Baixar PulseX
 					</a>
 					<div className="mt-6 rounded-xl border border-white/10 bg-white/[0.03] p-4 text-sm text-slate-300">
 						<p>Checksum (SHA256): <code className="break-all">0000000000000000000000000000000000000000000000000000000000000000</code></p>

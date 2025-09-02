@@ -146,16 +146,16 @@
 				}
 				
 				if (remember) {
-					localStorage.setItem('hone_user', JSON.stringify(userData))
+					localStorage.setItem('pulsex_user', JSON.stringify(userData))
 				} else {
-					sessionStorage.setItem('hone_user', JSON.stringify(userData))
+					sessionStorage.setItem('pulsex_user', JSON.stringify(userData))
 				}
 				
 				// Success - redirect to main page with boot screen
 				showToast('Login realizado com sucesso!', 'Redirecionando...', 'success')
 				
 				// Store login state for boot screen
-				localStorage.setItem('hone_show_boot', 'true')
+				localStorage.setItem('pulsex_show_boot', 'true')
 				
 				setTimeout(() => {
 					window.location.href = '/'
@@ -228,13 +228,13 @@
 					isNewUser: true
 				}
 				
-				localStorage.setItem('hone_user', JSON.stringify(userData))
+				localStorage.setItem('pulsex_user', JSON.stringify(userData))
 				
 				// Success - redirect to main page with boot screen
 				showToast('Conta criada com sucesso!', 'Redirecionando...', 'success')
 				
 				// Store login state for boot screen
-				localStorage.setItem('hone_show_boot', 'true')
+				localStorage.setItem('pulsex_show_boot', 'true')
 				
 				setTimeout(() => {
 					window.location.href = '/'
@@ -331,7 +331,7 @@
 
 	// Check if user is already logged in
 	function checkLoginStatus() {
-		const userData = localStorage.getItem('hone_user') || sessionStorage.getItem('hone_user')
+		const userData = localStorage.getItem('pulsex_user') || sessionStorage.getItem('pulsex_user')
 		
 		if (userData) {
 			try {
@@ -345,8 +345,8 @@
 				}
 			} catch (e) {
 				// Invalid data, clear it
-				localStorage.removeItem('hone_user')
-				sessionStorage.removeItem('hone_user')
+				localStorage.removeItem('pulsex_user')
+				sessionStorage.removeItem('pulsex_user')
 			}
 		}
 	}

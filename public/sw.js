@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hone-optimizer-v1.0.0'
+const CACHE_NAME = 'pulsex-v1.0.0'
 const urlsToCache = [
 	'/',
 	'/index.html',
@@ -69,7 +69,7 @@ function doBackgroundSync() {
 // Push notifications (if implemented)
 self.addEventListener('push', event => {
 	const options = {
-		body: event.data ? event.data.text() : 'Nova notificação do Hone Optimizer',
+		body: event.data ? event.data.text() : 'Nova notificação do PulseX',
 		icon: '/public/favicon.svg',
 		badge: '/public/favicon.svg',
 		vibrate: [100, 50, 100],
@@ -92,7 +92,7 @@ self.addEventListener('push', event => {
 	}
 
 	event.waitUntil(
-		self.registration.showNotification('Hone Optimizer', options)
+		self.registration.showNotification('PulseX', options)
 	)
 })
 
